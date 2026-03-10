@@ -19,7 +19,7 @@ export function MyVideoCard({ video, user, onDelete }: MyVideoCardProps) {
 
   const createdAtLabel =
     "createdAt" in video
-      ? new Date(video.createdAt as string | number).toLocaleDateString()
+      ? new Date(video.createdAt as string | number).toLocaleDateString("en-US")
       : "";
 
   const meta = `${createdAtLabel} • ${video.viewCount} views`;

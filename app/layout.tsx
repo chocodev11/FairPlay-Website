@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { Providers } from "@/components/providers";
 import {
   DEFAULT_DESCRIPTION,
@@ -18,7 +18,7 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -57,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${openSans.variable} antialiased`}
+        className={`${montserrat.variable} ${inter.variable} antialiased`}
       >
         <Providers>{children}</Providers>
       </body>

@@ -97,7 +97,7 @@ export default function AppTopbar() {
         </div>
       ) : (
         <>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-1 items-center gap-4">
             <Button
               onClick={toggle}
               size="icon"
@@ -111,15 +111,17 @@ export default function AppTopbar() {
             </Link>
           </div>
 
-          <div className="hidden max-w-sm flex-1 items-center sm:flex mx-8">
-            <SearchBar
-              value={searchTerm}
-              onChange={setSearchTerm}
-              onSearch={handleSearch}
-            />
+          <div className="hidden flex-[2] max-w-2xl items-center justify-center sm:flex mx-4">
+            <div className="w-full max-w-lg">
+              <SearchBar
+                value={searchTerm}
+                onChange={setSearchTerm}
+                onSearch={handleSearch}
+              />
+            </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-1 items-center justify-end gap-2">
             <Button
               size="icon"
               variant="ghost"

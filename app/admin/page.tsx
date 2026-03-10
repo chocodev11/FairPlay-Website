@@ -445,7 +445,7 @@ export default function AdminPage() {
                     </div>
                   </div>
                   <div className="mt-3 text-sm text-text-amount">
-                    Joined {new Date(user.createdAt).toLocaleDateString()}
+                    Joined {new Date(user.createdAt).toLocaleDateString("en-US")}
                   </div>
 
                   {user.isBanned && user.banReasonPublic ? (

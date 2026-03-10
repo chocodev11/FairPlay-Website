@@ -252,7 +252,7 @@ export default function ChannelPageClient({
                     <div className="flex items-center gap-1.5">
                       <MdCalendarMonth className="size-3.5" />
                       <span>
-                        Joined {new Date(user.createdAt).toLocaleDateString(undefined, {
+                        Joined {new Date(user.createdAt).toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "long",
                         })}
@@ -325,7 +325,7 @@ export default function ChannelPageClient({
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {videos.map((v) => {
-              const createdAtLabel = new Date(v.createdAt).toLocaleDateString();
+              const createdAtLabel = new Date(v.createdAt).toLocaleDateString("en-US");
               const meta = `${v.viewCount} views • ${createdAtLabel}`;
 
               return (

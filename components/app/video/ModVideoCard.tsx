@@ -26,7 +26,7 @@ export function ModVideoCard({
 
   const createdAtLabel =
     "createdAt" in video
-      ? new Date(video.createdAt as string | number).toLocaleDateString()
+      ? new Date(video.createdAt as string | number).toLocaleDateString("en-US")
       : "";
   const showModerationActions =
     video.moderationStatus === "pending" && !isProcessing;
